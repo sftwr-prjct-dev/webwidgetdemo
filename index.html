@@ -8,9 +8,18 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+</style>
 
 <body>
-    <button id="webwidget_button_webwidgetID">Buy TKN Token</button>
+    <div style="height: 90vh; width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; font-size: 3rem;">Header</div>
+        <button style="height: 40px; width: 200px; border-radius: 5px;" id="webwidget_button_webwidgetID">Swap TKN Token</button>
+    </div>
+    
     <div id="webwidget_modal_webwidgetID" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; background-color: rgba(0, 0, 0, 0.1);" >
         <button id="webwidget_close_webwidgetID" style="color: white; background-color: tomato; position: absolute; right: 2rem; top: 2rem; padding: 3px; border-radius: 4px; border: none; outline: none; cursor: pointer;">Close</button>
         <div id="webwidget_loading_webwidgetID" style="display: flex; flex-wrap: wrap; width: 100%; height: 100%; justify-content: center; align-items: center;">
@@ -33,7 +42,7 @@
             modal.style.display = "block"
             frame.style.display = "block"
             setTimeout(() => {
-                frame.src = "http://localhost:3000/"
+                frame.src = "https://web3lib.com/widgets/swap"
                 loading.style.display="none"
             }, 2000)
         })
